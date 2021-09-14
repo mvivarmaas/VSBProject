@@ -1,0 +1,93 @@
+{% extends "base_template.html" %}
+{% block content %}
+
+
+<div class="blocktab">
+
+    <h2> The following is the API for developers</h2>
+    <p id="p-padding-top"> Design is to be a <b>simple</b> and <b>free</b> look up for McGill Classes</p>
+
+    <br>
+
+    <div class="API_block">
+
+
+    <div class="API_block_unit">
+    <h3> ROOT URL  </h3>
+        <code><span class="codeline url">freeseatfinder.com</span></code>
+    </div>
+
+    <div class="API_block_unit">
+
+        <h3> URL <span style="color:#5E81AC"> GET</span> </h3>
+
+        <code>
+            <span class="codeline">/API/{ term }/<{<strong class="subject_code">Subject Code</strong> + - + <strong class="subject_number">Subject number</strong>} ></span>
+            <span class="codeline"> /API/202109/COMP-202</span>
+        </code>
+
+        <h3><b> Note: </b></h3>
+        <p class="indent"> Subject <b>code</b> / <b>number</b> should be the same as minerva</p>
+        <p class="indent"> <b>term</b> is int. term = year + semester start month</p>
+        <p class="indent">Fall = 09, Winter = 01. Example Fall 2021 = 202109</p>
+
+    </div>
+
+
+    <p>Required: Subject code and Subject number</p>
+
+    <br>
+
+
+    <h3> <b> Success Response:</b>  </h3>
+
+    <p>  Code : <strong style="color: #00C900">200</strong>  </p>
+    <p>  Content example :</p>
+
+       <code>
+           <span class="codeline">{</span>
+           <span class="codeline">"className" : <span class="value">"comp-202"</span>,</span>
+           <span class="codeline"> "term" : <span class="valueint"> 2019 </span></span>
+           <span class="codeline">"classTitle" : <span class="value">"Foundations of Programming"</span></span>
+               <span class="codeline">"classDescription" : <span class="value">"Introduction to computer programming in a high level language . . . "</span>,</span>
+               <span class="codeline">"crnArray" : [<span class="valueint">2720</span>, <span class="valueint">2721</span>, . . . ],</span>
+           <span class="codeline">"timeBlock"  :</span>
+           <span class="codeline">   [</span>
+           <span class="codeline indent">   {</span>
+               <span class="codeline indent">   "crn" : <span class="valueint">2720</span>, "instructor" : <span class="value">"Campbell, Jonathan"</span>, </span>
+
+               <span class="codeline indent"> "seatsAvailable" : <span class="valuebool">True</span>, "Section": <span class="valueint">1</span>, "Type": <span class="value">"Lecture"</span>,</span>
+               <span class="codeline indent ">   numberAvailableSeats: <span class="valueint">5</span>, numberAvailableWaitList: <span class="valueint">2</span>, numberMaxWaitList: <span class="valueint">20</span></span>
+           <span class="codeline indent "> classTimes : <span class="value">Monday : 1:35 PM - 2:25 PM</span></span>
+           <span class="codeline indent">   }</span>
+               <span class="codeline indent">   {"crn" : <span class="valueint">2721</span> , . . . }</span>
+           <span class="codeline">  . . .</span>
+           <span class="codeline">   ]</span>
+           <span class="codeline">  } </span>
+
+            </code>
+
+
+    <h3> <b> Failed Response:</b>  </h3>
+
+        <p>  Code : <strong style="color: #cc0000">400</strong> </p> <p>Bad Request </p>
+        <code> <span class="codeline">{ error : <span class="value">Bad request try entering correct subject code and title example "/API/COMP-206"</span> }</span> </code>
+
+
+        <p>  Code : <strong style="color: #cc0000">404</strong>  </p><p>Class not found</p>
+                <code> <span class="codeline">{ error : <span class="value">Input class not found, please try again with valid class </span> }</span> </code>
+
+         <p>  Code : <strong style="color: #cc0000">429</strong>  </p><p>Class not found</p>
+                <code> <span class="codeline">{ error : <span class="value">Rate limited too many requests </span> }</span> </code>
+
+
+
+</div>
+
+</div>
+
+
+{% endblock content %}
+
+
+

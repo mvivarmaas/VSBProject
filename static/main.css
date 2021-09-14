@@ -1,0 +1,348 @@
+body html{
+    height: 100%;
+    width: 100%;
+}
+
+b{
+    font-weight: bold;
+
+}
+
+
+#Main-title{
+    font-size: 5em;
+    padding: 5px 8px 5px 5px;
+    border-bottom: 2px solid white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+#tabunder{
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+.table_element{
+    padding: 4px 12px;
+     font-family: 'Times New Roman', 'Georgia', sans-serif;
+}
+
+
+
+.block > form > label{
+    display: None;
+
+}
+
+.block > form > ul > li{
+    font-size: 20px;
+    padding-right: 12px;
+    padding-left : 12px;
+    padding-top: 10px
+}
+
+
+
+
+
+h2{
+    font-size: 2.5em;
+    font-family: 'Georgia', sans-serif;
+
+}
+
+p{
+    font-size: 1.4em;
+    font-family: 'Times New Roman', 'Georgia', sans-serif;
+
+
+}
+
+.blocktab{
+    padding-top: 15px;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+
+
+#secondblock > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 8px;
+    padding: 0;
+}
+
+#secondblock > ul > li{
+    margin-bottom: 5px;
+}
+
+#secondblock > h2{
+
+    font-size: 2.8em;
+
+}
+
+
+.block > form > input{
+    padding: 10px ;
+    margin-top: 10px;
+    width: 24%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 22px ;
+}
+
+
+
+.block > form {
+
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+#id_class_name{
+    padding: 0;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 92%;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.block{
+    background-color: #f6f6f6;
+    margin: 2% 2% 2%;
+    height: 100%;
+    padding: 12px;
+    padding-bottom: 20px;
+
+}
+
+.CRNblock{
+    display: flex;
+
+}
+
+
+.timeblock{
+    border-bottom: 8px solid white;
+    padding: 10px;
+}
+
+
+
+
+#toptabcontact{
+    padding-bottom: 6px;
+    border-bottom: 8px solid white;
+}
+
+
+.checkboxtimeblock{
+    height: 20px;
+    width: 20px;
+
+}
+
+
+#emailphone{
+    padding: 18px;
+    border-bottom: 8px solid white;
+
+}
+
+#email  {
+    font-size: 22px;
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+#phone{
+    font-size: 22px;
+
+}
+label{
+    font-size: 25px;
+}
+
+
+#id_term
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+#toptab{
+    background: rgb(237,27,47);
+    color: white;
+}
+
+#coursecode{
+    font-size: 27px;
+    padding-left:15px;
+}
+
+#description{
+    font-size: 16px;
+
+}
+
+#OK{
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+#blockfooter
+{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+#finalfooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+.headerlink{
+    color: white;
+     text-decoration: none;
+}
+
+.footerlink{
+    color:red
+}
+
+
+
+h3{
+
+    font-size: 22px;
+    padding-bottom: 2px;
+
+}
+
+
+.API_block_unit{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F8F8F8;
+}
+
+.API_block{
+    padding: 18px 8px;
+    margin: 2px 2px;
+    text-align: left;
+    text-indent: 8px;
+    letter-spacing: 2px;
+}
+
+#p-padding-top{
+
+    padding-top:6px
+}
+
+
+.codeline{
+    padding: 4px;
+
+    display: block;
+    color: #D8DEE9;
+    background-color: #434C5E;
+}
+
+code{
+    font-family: monospace;
+    padding: 10px 5px;
+    margin: 5px;
+    text-indent: 12px;
+    font-size: 18px
+
+}
+
+.indent{
+ text-indent: 48px;
+}
+
+.value{
+    color: #A3BE8C;
+}
+
+.valuebool{
+    color: #BF616A;
+}
+.valueint{
+    color:#D08770;
+}
+
+h3{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 26px;
+    color: #1b1b1b;
+    padding-bottom: 4px;
+    padding-top: 3px;
+}
+
+
+#contact > form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contact > form > input
+{
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;;
+}
+
+
+#borderpadding
+{
+    
+    margin-bottom: 25px;
+}
+
+
+@media only screen and (max-width: 420px) {
+    .block > form > input{
+    font-size: 15px ;
+    }
+
+    label{
+    font-size: 17px;
+}
+
+    h2{
+        font-size:2.0em
+    }
+
+}

@@ -1,0 +1,23 @@
+{% extends "base_template.html" %}
+{% block content %}
+
+
+
+<div class="blocktab">
+    <h2> Enter Course Code below</h2>
+    <p> Enter a course code below and get <b>free</b> notification to your phone and email when a spot on the waitlist is available</p>
+</div>
+
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock content %}
+
+
+
+

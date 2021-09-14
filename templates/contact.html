@@ -1,0 +1,28 @@
+{% extends "base_template.html" %}
+{% block content %}
+
+    <div id="borderpadding">
+<div id="blocktab">
+    <h2> Note:</h2>
+    <p> Please only contact for <b> bugs, errors, testing, features, expanding the project</b> and other subjects that might relate to the project, also please make the subject clear. </p>
+    <p> if you would like to talk about <b>startups</b> or <b>internships</b> or other cool stuff / idea's try shooting me a Dm on twitter or emaling me directly at</p><p> [first].[last]@mail.mcgill.ca</p>
+
+</div>
+
+    </div>
+
+    <div id="blocktab">
+
+    <div id="contact">
+    <h2>Contact us</h2>
+        <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    </div>
+
+{% endblock content %}

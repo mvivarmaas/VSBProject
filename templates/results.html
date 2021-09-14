@@ -1,0 +1,134 @@
+
+
+
+{% extends "base_template.html" %}
+
+{% block content %}
+<form id="submit_form" action="/class/{{ term }}/{{ className }}" method="post">{% csrf_token %}
+
+
+
+
+<div>
+
+    <div id="toptabcontact">
+        <h2>{{ classTitle }}</h2>
+        <p id="coursecode"> Course Code: <b>{{ className }}</b></p>
+        <p id="description">{{ classDescription }}</p>
+    </div>
+
+
+
+{% for o in timeBlock %}
+    <div class="timeblock">
+        <div class="CRNblock">
+        {% if o.seatsAvailable %}
+        <p> CRN: <b>{{ o.crn }} </b> </p>
+
+
+
+        {% else %}
+
+            <p> CRN: <b>{{ o.crn }} </b> </p>
+             <input class="checkboxtimeblock" type="checkbox" name={{ o.crn }} />
+
+        {% endif %}
+        </div>
+
+        <p> Professor: {{  o.instructor }}</p>
+
+        <div>
+            {% for q in o.classTimes  %}
+                <div>{{ q }}</div>
+            {% endfor %}
+        <div>
+
+        {% if o.seatsAvailable %}
+            <p> This class has <b>available</b> seats, sign up on Minerva!</p>
+
+            <!-- <input type="checkbox" name={{ o.CRN }} /> -->
+        {% endif %}
+        </div>
+
+        </div>
+
+
+
+    </div>
+{% endfor %}
+
+
+</div>
+
+<div id="emailphone">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required/>
+    </div>
+
+
+    {% load static  %}
+
+    <div>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" name="phone">
+        <span id="valid-msg" class="hide">✓ Valid</span>
+        <span id="error-msg" class="hide"></span>
+
+
+        <script>
+  var input = document.querySelector("#phone"),
+  errorMsg = document.querySelector("#error-msg"),
+  validMsg = document.querySelector("#valid-msg");
+  var error = true
+  document.querySelector("#submit_form").onsubmit = function ()
+{
+  return error
+}
+
+
+// here, the index maps to the error code returned from getValidationError - see readme
+var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+// initialise plugin
+var iti = window.intlTelInput(input, {
+  utilsScript: "{% static "phone_number/intl-tel-input-17.0.0/build/js/utils.js" %}",
+  initialCountry: 'ca'
+});
+
+var reset = function() {
+  input.classList.remove("error");
+  errorMsg.innerHTML = "";
+  errorMsg.classList.add("hide");
+  validMsg.classList.add("hide");
+  error = true
+};
+
+// on blur: validate
+input.addEventListener('blur', function() {
+  reset();
+  if (input.value.trim()) {
+    if (iti.isValidNumber()) {
+      validMsg.classList.remove("hide");
+      error = true
+    } else {
+      input.classList.add("error");
+      var errorCode = iti.getValidationError();
+      errorMsg.innerHTML = errorMap[errorCode];
+      errorMsg.classList.remove("hide");
+      error = false
+    }
+  }
+});
+
+// on keyup / change flag: reset
+input.addEventListener('change', reset);
+input.addEventListener('keyup', reset);
+        </script>
+
+    </div>
+</div>
+  <input id="OK" type="submit" value="OK">
+</form>
+{% endblock content %}

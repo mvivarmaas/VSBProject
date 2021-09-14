@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple website to book waitlisted seats in McGill">
+    <meta name="author" content="Abu bakar Daud ❤️">
+
+    <meta property="og:title" content="Free Seat Finder McGill">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Finds you waitlisted seats for free! :D">
+
+
+
+    <link rel="stylesheet" href="{%  static "reset.css"  %}">
+    <link rel="stylesheet" href="{%  static "main.css"  %}">
+
+    <link rel="stylesheet" href="{%  static "phone_number/intl-tel-input-17.0.0/build/css/intlTelInput.css"  %}">
+    <script type='text/javascript' src='{% static "phone_number/intl-tel-input-17.0.0/build/js/intlTelInput.min.js" %}' ></script>
+
+
+
+
+
+    <title>Free seat finder McGill</title>
+</head>
+
+
+    <body>
+
+    <header>
+    <div id="toptab">
+    <div id="Main-title"><a class="headerlink" href="{% url 'index' %}">Free Seat Finder McGill </a></div>
+    <div id="tabunder">
+        <div class="table_element"> <a class="headerlink" href='{%  url 'contact' %}'> Contact</a> </div>
+        <div class="table_element"> <a class="headerlink" href="https://github.com/abubakardaud/VSBProject">GitHub</a> </div>
+        <div class="table_element"> <a class="headerlink" href='{%  url 'API' %}'> API</a> </div>
+    </div>
+    </div>
+    </header>
+
+
+
+    <div class="block">
+    {% block content %}{% endblock content %}
+    </div>
+
+
+    <div class="block">
+        <div id="secondblock" class="blocktab">
+            <h2> Important Information </h2>
+            <ul>
+                <li> This site is <b>not</b> affiliated with McGill University </li>
+                <li>This site only sends a notification, it does not sign up for you </li>
+                <li>Does <b>not work</b> for courses that have <b>special reserved</b> seats </li>
+                <li>Will always be <b>free</b>, I will never make a profit off this</li>
+                <li> Project is open source so please contribute on GitHub</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="block">
+        <div id="blockfooter">
+        <div> Made with love by Abu ❤️ </div>
+
+
+
+
+            <div id="finalfooter">
+                <div> © 2021 Abu bakar Daud | <a class="footerlink"href="https://twitter.com/abulovescode">Twitter</a> | <a class="footerlink" href="https://github.com/abubakardaud">GitHub</a> </div>
+
+            </div>
+        </div>
+        </div>
+
+    </body>
+</html>
