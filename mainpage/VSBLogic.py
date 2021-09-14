@@ -85,7 +85,7 @@ def get_class(class_name, term):
     url_useless = "&rq_1_0=null&nouser=1"
     url_date = get_date()
     final_url = url_base + url_term + url_course + url_useless + url_date
-    r = requests.get(final_url)
+    r = requests.get(final_url,verify=False)
 
 
     if r.status_code == 200:
