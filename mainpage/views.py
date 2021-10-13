@@ -1,3 +1,4 @@
+import django
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -18,6 +19,7 @@ from VSBProject import settings
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
+
 
 
 # Create your views here.
@@ -216,3 +218,6 @@ def API_GET(request, slug, term):
 
 def account(request):
     return HttpResponse("secert feature for Christina 0v0")
+
+def custom_server_error(request):
+    return django.views.defaults.server_error(request)
