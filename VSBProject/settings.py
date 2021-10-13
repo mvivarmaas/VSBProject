@@ -31,7 +31,7 @@ if SECRET_KEY is None:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #hi
 ALLOWED_HOSTS = ['freeseatfinder.com', 'www.freeseatfinder.com']
 
