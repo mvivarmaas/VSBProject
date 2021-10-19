@@ -23,3 +23,33 @@ run the following commands
 6. Introduce a cheaper Phone system 
 
 ## File structure  
+
+├── _VSBProject (settings, don't edit unless you know what you are doing )
+├── _mainpage (the main webpage itself is an app and it's hosted here)
+│   ├── VSBLogic.py (has the code to reverse engineer the VSB API) 
+|   ├── models.py (data base ORM models layout for the SQL data base) 
+|   ├── urls.py (maps the URLs to views)
+|   ├── views.py (functions that return a view to the client (HTML page etc))
+|   └── tests.py (tests for the app need to write more functions)   
+|   
+├── _static (contains the static files, CSS Javascript)
+├── _staticfiles (generated staticfiles by Django)
+├── _templates
+|   ├── 500.html (server error HTML)
+|   ├── API.html (Api HTML code to show people how to use the API)
+|   ├── account.html (Todo need to build an account page)
+|   ├── base_template.html (Base template header and footer, everything else extends from this one, look up Django extend)
+|   ├── contact.html (contact me using HTML)
+|   ├── contactsuccess.html (contact success)
+|   ├── fail.html (failed page for the process of finds class)
+|   ├── index.html (landing page)
+|   ├── no_crn.html (user didn't check a crn)
+|   ├── results.html (pull the classes after look up from the index page 
+|   └── success.html (added to the waitlist success for the user)
+│   
+│── Procfile (for heroku don't touch unless you know how to use Heroku)
+|── README.md (this current text)
+|── manage.py (Djnago file, read Djnago docs)
+└── requirements.txt (has all the needed installs to make the project work ) 
+
+
