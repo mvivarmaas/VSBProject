@@ -13,7 +13,13 @@ run the following commands
 5. <code>python3 manage.py migrate</code>
 5. <code>python3 runserver</code>
 
-## 
+## To do list in terms of priority 
 
+1. Change the system schudule to ping VSB so we don't get rate limited; need to upgrade (django-background-tasks) 
+2. Make sure the pings appear to look normal from google chrome
+3. Change the CSS / HTML to make it more pretty
+4. OAuth and accounts with McGill login so people can remove / add to the waitlist 
+5. Introduce rate limits so users can't ping our servers hundreds of times in seconds
+6. Introduce a cheaper Phone system 
 
 ## 
