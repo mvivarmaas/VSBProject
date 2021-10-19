@@ -24,7 +24,7 @@ run the following commands
 
 ## File structure  
 
-
+```
 .
 ├── _VSBProject (settings, don't edit unless you know what you are doing )
 ├── _mainpage (the main webpage itself is an app and it's hosted here)
@@ -53,5 +53,7 @@ run the following commands
 |── README.md (this current text)
 |── manage.py (Djnago file, read Djnago docs)
 └── requirements.txt (has all the needed installs to make the project work ) 
+```
+
 
 
