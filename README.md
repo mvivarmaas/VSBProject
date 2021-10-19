@@ -20,7 +20,8 @@ run the following commands
 3. Change the CSS / HTML to make it more pretty
 4. OAuth and accounts with McGill login so people can remove / add to the waitlist 
 5. Introduce rate limits so users can't ping our servers hundreds of times in seconds
-6. Introduce a cheaper Phone system 
+6. Auth for emails 
+7. Introduce a cheaper Phone system to Auth phones send texts to users, using email to text. 
 
 
 ## API 
