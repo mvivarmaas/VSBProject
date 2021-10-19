@@ -22,6 +22,11 @@ run the following commands
 5. Introduce rate limits so users can't ping our servers hundreds of times in seconds
 6. Introduce a cheaper Phone system 
 
+
+## API 
+
+Vist https://www.freeseatfinder.com/API to find out how to use the API
+
 ## File structure  
 
 ```
