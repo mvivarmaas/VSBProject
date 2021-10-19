@@ -24,6 +24,8 @@ run the following commands
 
 ## File structure  
 
+
+.
 ├── _VSBProject (settings, don't edit unless you know what you are doing )
 ├── _mainpage (the main webpage itself is an app and it's hosted here)
 │   ├── VSBLogic.py (has the code to reverse engineer the VSB API) 
